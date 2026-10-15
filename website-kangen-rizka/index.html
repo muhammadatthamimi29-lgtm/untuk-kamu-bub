@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffd9e8">
+<title>Untuk Rizka 💗</title>
+<style>
+:root{--pink:#ffe5ef;--pink2:#ffc5dc;--hot:#d63376;--dark:#8d2854;--cream:#fffafd;--shadow:0 16px 45px rgba(174,58,103,.14)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;overflow-x:hidden;font-family:"Trebuchet MS",Arial,sans-serif;color:var(--dark);background:radial-gradient(circle at 12% 15%,#fff 0 5px,transparent 6px),radial-gradient(circle at 90% 35%,#ffc2d8 0 8px,transparent 9px),linear-gradient(145deg,#fff3f8,#ffd7e7 55%,#fff7fa);background-size:90px 90px,120px 120px,auto}
+button,input{font:inherit}
+button{touch-action:manipulation}
+.decor{position:fixed;z-index:0;pointer-events:none;opacity:.48;font-size:clamp(22px,4vw,42px);animation:float 6s ease-in-out infinite}
+.d1{top:8%;left:4%}.d2{top:22%;right:5%;animation-delay:-2s}.d3{bottom:13%;left:7%;animation-delay:-3s}.d4{bottom:8%;right:8%;animation-delay:-1s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(8deg)}}
+main{position:relative;z-index:1;width:min(940px,100%);margin:auto;padding:22px 15px 45px}
+.hero{text-align:center;padding:28px 12px 20px}
+.eyebrow{margin:0 0 9px;letter-spacing:2px;text-transform:uppercase;font-size:.76rem;font-weight:800;color:#b64b76}
+h1{margin:0;font-size:clamp(2rem,7vw,4rem);line-height:1.12;color:#b52b62}
+.subtitle{margin:14px auto 0;max-width:590px;line-height:1.75;font-size:clamp(.96rem,2.8vw,1.1rem)}
+.card{background:rgba(255,250,252,.92);border:1px solid rgba(255,141,184,.48);border-radius:25px;padding:clamp(17px,4vw,30px);margin:18px 0;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+.section-title{text-align:center;margin:0 0 18px;font-size:clamp(1.25rem,4vw,1.7rem)}
+.slideshow{position:relative;overflow:hidden;border-radius:18px;background:#ffe1eb;aspect-ratio:16/10}
+.slide{display:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.slide.active{display:block;animation:fade .55s ease}
+@keyframes fade{from{opacity:.25}to{opacity:1}}
+.photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(135deg,#ffc7dc,#fff0f6);color:#a82c60;line-height:1.65}
+.photo-placeholder strong{display:block;font-size:1.2rem;margin-bottom:7px}
+.slide-btn{position:absolute;top:50%;transform:translateY(-50%);border:0;border-radius:50%;width:42px;height:42px;background:rgba(255,255,255,.92);color:#a82c60;font-size:1.5rem;cursor:pointer}
+.prev{left:12px}.next{right:12px}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#efabc5;cursor:pointer}
+.dot.active{background:#b52b62;transform:scale(1.2)}
+.caption{text-align:center;min-height:24px;margin:12px 0 0;font-size:.92rem}
+.question{text-align:center}
+.question h2{font-size:clamp(1.5rem,5vw,2.3rem);margin:0 0 8px}
+.question p{line-height:1.65;margin:0 auto 20px}
+.buttons{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;min-height:58px}
+.answer,.primary{border:0;border-radius:999px;padding:14px 20px;font-size:1rem;font-weight:800;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;min-height:48px;box-shadow:0 7px 16px rgba(174,58,103,.16)}
+.answer:hover,.primary:hover{transform:translateY(-2px)}
+.yes,.primary{background:#d93e7a;color:white}
+.no{background:#fff;color:#a82c60;border:1px solid #f2a6c3}
+#response{min-height:48px;margin-top:20px;font-size:clamp(1.25rem,4vw,2rem);font-weight:900;color:#c02665}
+.music-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;text-align:center}
+.music-button{border:0;background:#b52b62;color:white;border-radius:999px;padding:12px 18px;font-weight:800;cursor:pointer}
+.small-note{font-size:.83rem;line-height:1.55;color:#88516a}
+.letter-wrap{text-align:center}
+.letter-icon{font-size:3rem;display:block;margin:4px auto 12px;animation:float 4s ease-in-out infinite}
+.letter-button{background:#fff;color:#b52b62;border:2px dashed #f08bb4}
+.letter{display:none;text-align:left;margin-top:20px;padding:clamp(17px,4vw,26px);border-radius:18px;background:linear-gradient(135deg,#fff6fa,#ffe3ee);border:1px solid #f5bfd3;line-height:1.9;white-space:pre-line;animation:fade .5s ease}
+.letter.open{display:block}
+.counter{text-align:center}
+.counter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.counter-box{background:#fff0f6;border:1px solid #ffd0e1;border-radius:14px;padding:14px 5px}
+.counter-number{font-size:clamp(1.5rem,5vw,2.3rem);font-weight:900;color:#c02665;display:block}
+.counter-label{font-size:.8rem;color:#92506a}
+.date-row{display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap}
+input[type=date]{border:1px solid #efabc5;border-radius:10px;padding:11px;background:white;color:#7b294e;max-width:100%}
+.date-help{font-size:.82rem;color:#88516a;line-height:1.55}
+footer{text-align:center;padding:18px 8px 0;font-size:.9rem}
+.petal{position:fixed;top:-45px;z-index:20;pointer-events:none;user-select:none;animation:fall linear forwards;filter:drop-shadow(0 2px 2px rgba(120,20,60,.1))}
+@keyframes fall{0%{transform:translate3d(0,-8vh,0) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translate3d(var(--drift),110vh,0) rotate(650deg);opacity:.15}}
+@media(max-width:560px){main{padding:12px 11px 30px}.hero{padding-top:24px}.card{border-radius:20px}.slideshow{aspect-ratio:4/3}.answer{width:100%;max-width:330px}.buttons{flex-direction:column}.counter-grid{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<span class="decor d1">🌸</span><span class="decor d2">💗</span><span class="decor d3">🌷</span><span class="decor d4">💕</span>
+<main>
+<header class="hero">
+<p class="eyebrow">halaman kecil yang dibuat khusus untukmu</p>
+<h1>Haiiii Bubbbb sayangkuuu<br>Rizkaaaaaa 💗</h1>
+<p class="subtitle">Aku punya sesuatu buat kamu. Sederhana sih, tapi dibuat pakai rasa sayang yang banyak banget. Jadi, scroll sampai bawah yaaa 🌷</p>
+</header>
+
+<section class="card" aria-labelledby="photos-title">
+<h2 class="section-title" id="photos-title">Potongan cerita kita 📸</h2>
+<div class="slideshow" id="slideshow">
+<div class="photo-placeholder" id="photoPlaceholder"><div><strong>🌸 Tempat foto kenangan kita 🌸</strong>Taruh foto kalian di folder yang sama dengan index.html, lalu beri nama <b>foto1.jpg</b> sampai <b>foto5.jpg</b>.</div></div>
+<img class="slide" src="foto1.jpeg" alt="Kenangan foto pertama">
+<img class="slide" src="foto2.jpeg" alt="Kenangan foto kedua">
+<img class="slide" src="foto3.jpeg" alt="Kenangan foto ketiga">
+<img class="slide" src="foto4.jpeg" alt="Kenangan foto keempat">
+<img class="slide" src="foto5.jpeg" alt="Kenangan foto kelima">
+<button class="slide-btn prev" id="prevBtn" aria-label="Foto sebelumnya">‹</button><button class="slide-btn next" id="nextBtn" aria-label="Foto berikutnya">›</button>
+</div>
+<div class="dots" id="dots" aria-label="Pilih foto"></div>
+<p class="caption" id="caption">Setiap foto punya ceritanya sendiri 💞</p>
+</section>
+
+<section class="card question">
+<h2>Kamu kangen aku ga? 🥺</h2>
+<p>Pilih yang jujur yaaa… aku perhatiin loh jawabannya wkwkw 😚</p>
+<div class="buttons" id="buttonsArea"><button class="answer yes" id="yesBtn">Iya kangen banget 💗</button><button class="answer no" id="noBtn">Ga kangen sama sekalii najiss 😝</button></div>
+<div id="response" role="status" aria-live="polite"></div>
+</section>
+
+<section class="card letter-wrap">
+<h2 class="section-title">Ada surat kecil buat kamu bub 💌</h2>
+<span class="letter-icon">💌</span>
+<p>Ada beberapa hal yang kadang lebih gampang ditulis daripada diucapkan.</p>
+<button class="answer letter-button" id="letterBtn" aria-expanded="false">Coba buka surat cintanya bub 💗</button>
+<div class="letter" id="letterText">Haiiii sayangkuuu Rizkaaaaaa 💗
+
+Makasih yaa udah hadir dan jadi bagian manis di hidup aku. Mungkin aku nggak selalu bisa bikin semuanya sempurna, tapi aku mau terus belajar buat bikin kamu merasa disayang, dihargai, dan didengar.
+
+Semoga di antara hari-hari kamu yang capek, kamu selalu punya alasan kecil buat senyum. Kalau suatu hari kamu lagi sedih, semoga kamu ingat kalau kamu berharga dan ada banyak hal baik yang pantas kamu dapatkan.
+
+Jangan bosen-bosen cerita sama aku yaaa. Maaf juga yaa sayanggg kalau selama ini aku sering bikin kamu sedihh dan kitaa serlalu berantem teruss. Kita bikin lebih banyak kenangan, ketawa bareng, saling dukung, dan tumbuh jadi versi diri yang lebih baik.
+
+Pokoknya, semoga hari kamu selalu punya sedikit warna pink, bunga, dan rasa hangat. Aku sayang kamuuu 💗🌷
+
+— dari seseorang yang lagi kangen kamu</div>
+</section>
+
+<section class="card counter">
+<h2 class="section-title">Sudah berapa lama kita bersama? 🗓️</h2>
+<p>Masukkan tanggal jadian kita, nanti hitungannya muncul di sini.</p>
+<div class="date-row"><label for="anniversary">Tanggal jadian:</label><input type="date" id="anniversary"><button class="music-button" id="saveDateBtn">Hitung 💕</button></div>
+<div class="counter-grid" aria-live="polite">
+<div class="counter-box"><span class="counter-number" id="days">—</span><span class="counter-label">Hari</span></div>
+<div class="counter-box"><span class="counter-number" id="hours">—</span><span class="counter-label">Jam</span></div>
+<div class="counter-box"><span class="counter-number" id="minutes">—</span><span class="counter-label">Menit</span></div>
+<div class="counter-box"><span class="counter-number" id="seconds">—</span><span class="counter-label">Detik</span></div>
+</div>
+<p class="date-help" id="dateStatus">Tanggal jadian belum diisi. Pilih tanggal yang benar, lalu tekan Hitung 💗</p>
+</section>
+
+<section class="card">
+<h2 class="section-title">Putar lagu kita 🎶</h2>
+<div class="music-row"><button class="music-button" id="musicBtn">▶ Putar backsound</button><span id="musicStatus" class="small-note">Tekan tombol untuk memutar musik.</span></div>
+<p class="small-note" style="text-align:center;margin-bottom:0">Tambahkan file audio yang kamu punya hak untuk gunakan, dengan nama <b>backsound.mp3</b> di folder yang sama. Browser biasanya tidak mengizinkan musik otomatis diputar sebelum pengunjung menekan tombol.</p>
+<audio id="backgroundMusic" src="backsound.mp3" loop preload="none"></audio>
+</section>
+<footer>Dibuat dengan banyak cinta untuk Rizka 💗🌸</footer>
+</main>
+<script>
+const slides=Array.from(document.querySelectorAll(".slide"));
+const dotsContainer=document.getElementById("dots"),caption=document.getElementById("caption"),placeholder=document.getElementById("photoPlaceholder");
+const captions=["Kenangan pertama yang selalu bikin senyum 💗","Momen kecil yang berarti besar 🌷","Semoga ada banyak cerita berikutnya ✨","Satu foto, banyak rasa 💕","Terima kasih sudah jadi bagian ceritaku 🌸"];
+let currentSlide=0;
+slides.forEach((slide,index)=>{
+  slide.addEventListener("error",()=>{slide.dataset.missing="true";updatePlaceholder()});
+  slide.addEventListener("load",updatePlaceholder);
+  const dot=document.createElement("button");dot.className="dot";dot.setAttribute("aria-label","Tampilkan foto "+(index+1));dot.addEventListener("click",()=>showSlide(index));dotsContainer.appendChild(dot);
+});
+const dots=Array.from(dotsContainer.querySelectorAll(".dot"));
+function updatePlaceholder(){placeholder.style.display=slides.some(s=>s.complete&&s.naturalWidth>0)?"none":"grid"}
+function showSlide(index){
+  currentSlide=(index+slides.length)%slides.length;
+  let shown=false;
+  slides.forEach((s,i)=>{const active=i===currentSlide&&s.naturalWidth>0;s.classList.toggle("active",active);if(active)shown=true});
+  dots.forEach((d,i)=>d.classList.toggle("active",i===currentSlide));
+  caption.textContent=captions[currentSlide];
+  if(!shown){const available=slides.findIndex(s=>s.naturalWidth>0);if(available>=0){slides.forEach((s,i)=>s.classList.toggle("active",i===available));dots.forEach((d,i)=>d.classList.toggle("active",i===available))}}
+  updatePlaceholder();
+}
+document.getElementById("prevBtn").addEventListener("click",()=>showSlide(currentSlide-1));
+document.getElementById("nextBtn").addEventListener("click",()=>showSlide(currentSlide+1));
+showSlide(0);setInterval(()=>showSlide(currentSlide+1),4500);
+
+// Hujan bunga dan hati
+function makePetal(){
+  const p=document.createElement("span"),choices=["🌸","💗","🌷","💕","🌺","💖"];
+  p.className="petal";p.textContent=choices[Math.floor(Math.random()*choices.length)];
+  p.style.left=Math.random()*100+"vw";p.style.fontSize=(16+Math.random()*22)+"px";
+  p.style.setProperty("--drift",(Math.random()*180-90)+"px");p.style.animationDuration=(3.5+Math.random()*3.5)+"s";
+  document.body.appendChild(p);setTimeout(()=>p.remove(),7500);
+}
+let rainInterval=null;
+function startRain(duration=9000){
+  for(let i=0;i<35;i++)setTimeout(makePetal,i*80);
+  if(rainInterval)clearInterval(rainInterval);
+  rainInterval=setInterval(makePetal,220);
+  setTimeout(()=>{if(rainInterval){clearInterval(rainInterval);rainInterval=null}},duration);
+}
+document.getElementById("yesBtn").addEventListener("click",()=>{
+  document.getElementById("response").textContent="Cieee kangen! Aku juga kangen kamu, Rizkaaaaaa! 💗🌸";
+  startRain(12000);
+});
+
+// Tombol "tidak kangen" menghindar saat didekati/disentuh
+const noBtn=document.getElementById("noBtn");
+function moveNoButton(){
+  noBtn.style.position="fixed";noBtn.style.zIndex="50";
+  const margin=12,maxX=Math.max(margin,innerWidth-noBtn.offsetWidth-margin),maxY=Math.max(margin,innerHeight-noBtn.offsetHeight-margin);
+  noBtn.style.left=(margin+Math.random()*Math.max(0,maxX-margin))+"px";
+  noBtn.style.top=(margin+Math.random()*Math.max(0,maxY-margin))+"px";
+}
+noBtn.addEventListener("pointerenter",moveNoButton);
+noBtn.addEventListener("pointerdown",e=>{e.preventDefault();moveNoButton()});
+noBtn.addEventListener("click",e=>{e.preventDefault();moveNoButton()});
+addEventListener("resize",()=>{if(noBtn.style.position==="fixed")moveNoButton()});
+
+// Surat interaktif
+const letterBtn=document.getElementById("letterBtn"),letterText=document.getElementById("letterText");
+letterBtn.addEventListener("click",()=>{
+  const open=letterText.classList.toggle("open");
+  letterBtn.textContent=open?"Tutup suratnya 💌":"Buka surat cintanya 💗";
+  letterBtn.setAttribute("aria-expanded",String(open));
+  if(open)startRain(5000);
+});
+
+// Penghitung hari sejak tanggal jadian (tanggal bisa diisi sendiri)
+const dateInput=document.getElementById("anniversary"),dateStatus=document.getElementById("dateStatus");
+const savedDate=localStorage.getItem("tanggalJadianRizka");
+if(savedDate)dateInput.value=savedDate;
+function updateCounter(){
+  if(!dateInput.value){["days","hours","minutes","seconds"].forEach(id=>document.getElementById(id).textContent="—");return}
+  const start=new Date(dateInput.value+"T00:00:00"),now=new Date();
+  if(Number.isNaN(start.getTime()))return;
+  if(start>now){dateStatus.textContent="Tanggalnya masih di masa depan nih. Periksa lagi yaa 💗";return}
+  const diff=now-start;
+  document.getElementById("days").textContent=Math.floor(diff/86400000).toLocaleString("id-ID");
+  document.getElementById("hours").textContent=Math.floor(diff%86400000/3600000);
+  document.getElementById("minutes").textContent=Math.floor(diff%3600000/60000);
+  document.getElementById("seconds").textContent=Math.floor(diff%60000/1000);
+  dateStatus.textContent="Yeay, sudah selama itu kita punya cerita bersama! Semoga makin banyak kenangan manis 💞";
+}
+document.getElementById("saveDateBtn").addEventListener("click",()=>{
+  if(!dateInput.value){dateStatus.textContent="Pilih tanggal jadian dulu yaa 💗";return}
+  localStorage.setItem("tanggalJadianRizka",dateInput.value);updateCounter();
+});
+updateCounter();setInterval(updateCounter,1000);
+
+// Backsound
+const music=document.getElementById("backgroundMusic"),musicBtn=document.getElementById("musicBtn"),musicStatus=document.getElementById("musicStatus");
+musicBtn.addEventListener("click",async()=>{
+  if(music.paused){try{await music.play();musicBtn.textContent="⏸ Jeda backsound";musicStatus.textContent="Musik sedang diputar 💕"}
+  catch(e){musicStatus.textContent="Belum bisa memutar. Pastikan file backsound.mp3 tersedia."}}
+  else{music.pause();musicBtn.textContent="▶ Putar backsound";musicStatus.textContent="Musik dijeda."}
+});
+music.addEventListener("error",()=>{musicStatus.textContent="Tambahkan file backsound.mp3 agar musik bisa diputar."});
+</script>
+</body>
+</html>
